@@ -1,66 +1,115 @@
 {
-    "animals": [
-        {
-            "id": 1,
-            "name": "Doodles",
-            "breed": "Poodle",
-            "customerId": 1,
-            "locationId": 2
-        },
-        {
-            "id": 2,
-            "name": "Scab",
-            "breed": "Lab",
-            "customerId": 2,
-            "locationId": 1
-        },
-        {
-            "id": 3,
-            "name": "Molly",
-            "breed": "Collie",
-            "customerId": 3,
-            "locationId": 2
-        }
-    ],
-    "customers": [
-        {
-            "id": 1,
-            "name": "Hannah Hall",
-            "address": "7002 Chestnut Ct"
-        },
-        {
-            "id": 2,
-            "name": "Irene Ill",
-            "address": "7002 Chestnut Ct"
-        },
-        {
-            "id": 3,
-            "name": "Jacob Jall",
-            "address": "7002 Chestnut Ct"
-        }
-    ],
-    "employees": [
-        {
-            "id": 1,
-            "name": "Brittney Potts",
-            "locationId": 2
-        },
-        {
-            "id": 2,
-            "name": "Emma Beaton",
-            "locationId": 1
-        }
-    ],
-    "locations": [
-        {
-            "id": 1,
-            "name": "Nashville North",
-            "address": "8422 Johnson Pike"
-        },
-        {
-            "id": 2,
-            "name": "Nashville South",
-            "address": "209 Emory Drive"
-        }
-    ]
+  "animals": [
+    {
+      "name": "Doodles",
+      "breed": "Poodle",
+      "locationId": 2,
+      "customerId": 1,
+      "id": 1
+    },
+    {
+      "name": "Scab",
+      "breed": "Lab",
+      "locationId": 1,
+      "customerId": 2,
+      "id": 2
+    },
+    {
+      "name": "Molly",
+      "breed": "Collie",
+      "locationId": 4,
+      "customerId": 3,
+      "id": 3
+    },
+    {
+      "name": "Sandusky",
+      "breed": "Siberian Husky",
+      "locationId": 1,
+      "customerId": 1,
+      "id": 4
+    },
+    {
+      "name": "Cain",
+      "breed": "Great Dane",
+      "locationId": 3,
+      "customerId": 4,
+      "id": 5
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Hannah Hall",
+      "address": "100 Puppy Owner Dr"
+    },
+    {
+      "id": 2,
+      "name": "Irene Iris",
+      "address": "200 Puppy Owner Dr"
+    },
+    {
+      "id": 3,
+      "name": "Jacob Jarnkrok",
+      "address": "300 Puppy Owner Dr"
+    },
+    {
+      "id": 4,
+      "name": "Kelly Kapowski",
+      "address": "400 Puppy Owner Dr"
+    }
+  ],
+  "employees": [
+    {
+      "name": "Anna Anderson",
+      "locationId": 1,
+      "id": 1
+    },
+    {
+      "name": "Brittney Botts",
+      "locationId": 2,
+      "id": 2
+    },
+    {
+      "name": "Charles Curtis",
+      "locationId": 3,
+      "id": 3
+    },
+    {
+      "name": "Dale Dennings",
+      "locationId": 4,
+      "id": 4
+    },
+    {
+      "name": "Emma Eaton",
+      "locationId": 1,
+      "id": 5
+    },
+    {
+      "name": "Frank Ferguson",
+      "locationId": 4,
+      "id": 6
+    }
+  ],
+  "locations": [
+    {
+      "name": "Nashville North",
+      "address": "100 Puppy Way",
+      "id": 1
+    },
+    {
+      "name": "Nashville South",
+      "address": "200 Puppy Way",
+      "id": 2
+    },
+    {
+      "name": "Nashville East",
+      "address": "300 Puppy Way",
+      "id": 3
+    },
+    {
+      "name": "Nashville West",
+      "address": "400 Puppy Way",
+      "id": 4
+    }
+  ]
 }
