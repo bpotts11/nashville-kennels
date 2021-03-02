@@ -9,6 +9,9 @@ import { EmployeeList } from "./employee/EmployeeList";
 import { EmployeeProvider } from "./employee/EmployeeProvider";
 import { LocationList } from "./location/LocationList";
 import { LocationProvider } from "./location/LocationProvider";
+import { AnimalForm } from "./animal/AnimalForm"
+import { EmployeeForm } from "./employee/EmployeeForm"
+import { LocationForm } from "./location/LocationForm";
 
 export const ApplicationViews = () => {
     return (
@@ -22,8 +25,12 @@ export const ApplicationViews = () => {
             <AnimalProvider>
                 <LocationProvider>
                     <CustomerProvider>
+                        {/* Note the addition of "exact" now that we have an additional route with "/animals" in it below this Route: "/animals/create" */}
                         <Route exact path="/animals">
                             <AnimalList />
+                        </Route>
+                        <Route path="/animals/create">
+                            <AnimalForm />
                         </Route>
                     </CustomerProvider>
                 </LocationProvider>
@@ -36,14 +43,22 @@ export const ApplicationViews = () => {
             </CustomerProvider>
             {/* Render the animal list when http://localhost:3000/employees */}
             <EmployeeProvider>
-                <Route exact path="/employees">
-                    <EmployeeList />
-                </Route>
+                <LocationProvider>
+                    <Route exact path="/employees">
+                        <EmployeeList />
+                    </Route>
+                    <Route path="/employees/create">
+                        <EmployeeForm />
+                    </Route>
+                </LocationProvider>
             </EmployeeProvider>
             {/* Render the animal list when http://localhost:3000/locations */}
             <LocationProvider>
                 <Route exact path="/locations">
                     <LocationList />
+                </Route>
+                <Route path="/locations/create">
+                    <LocationForm />
                 </Route>
             </LocationProvider>
         </>
