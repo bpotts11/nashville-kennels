@@ -3,12 +3,12 @@ import { Route } from "react-router-dom"
 import { Home } from "./Home"
 import { AnimalList } from "./animal/AnimalList"
 import { AnimalProvider } from "./animal/AnimalProvider"
-// import { CustomerList } from "./customer/CustomerList";
-// import { CustomerProvider } from "./customer/CustomerProvider";
-// import { EmployeeList } from "./employee/EmployeeList";
-// import { EmployeeProvider } from "./employee/EmployeeProvider";
-// import { LocationList } from "./location/LocationList";
-// import { LocationProvider } from "./location/LocationProvider";
+import { CustomerList } from "./customer/CustomerList";
+import { CustomerProvider } from "./customer/CustomerProvider";
+import { EmployeeList } from "./employee/EmployeeList";
+import { EmployeeProvider } from "./employee/EmployeeProvider";
+import { LocationList } from "./location/LocationList";
+import { LocationProvider } from "./location/LocationProvider";
 
 export const ApplicationViews = () => {
     return (
@@ -25,23 +25,23 @@ export const ApplicationViews = () => {
                 </Route>
             </AnimalProvider>
             {/* Render the animal list when http://localhost:3000/customers */}
-            {/* <Route path="/customers">
-                <CustomerProvider>
+            <CustomerProvider>
+                <Route exact path="/customers">
                     <CustomerList />
-                </CustomerProvider>
-            </Route> */}
+                </Route>
+            </CustomerProvider>
             {/* Render the animal list when http://localhost:3000/employees */}
-            {/* <Route path="/employees">
-                <EmployeeProvider>
+            <EmployeeProvider>
+                <Route exact path="/employees">
                     <EmployeeList />
-                </EmployeeProvider>
-            </Route> */}
+                </Route>
+            </EmployeeProvider>
             {/* Render the animal list when http://localhost:3000/locations */}
-            {/* <Route path="/locations">
-                <LocationProvider>
+            <LocationProvider>
+                <Route exact path="/locations">
                     <LocationList />
-                </LocationProvider>
-            </Route> */}
+                </Route>
+            </LocationProvider>
         </>
     )
 }
