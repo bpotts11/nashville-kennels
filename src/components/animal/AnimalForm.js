@@ -81,12 +81,12 @@ export const AnimalForm = () => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="breed">Animal breed:</label>
-                    <input type="text" id="breed" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Animal breed" value={animal.breed} />
+                    <input type="text" id="breed" onChange={handleControlledInputChange} required className="form-control" placeholder="Animal breed" value={animal.breed} />
                 </div>
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="location">Assign to location: </label>
+                    <label htmlFor="locationId">Assign to location: </label>
                     <select value={animal.locationId} name="locationId" id="locationId" onChange={handleControlledInputChange} className="form-control" >
                         <option value="0">Select a location</option>
                         {locations.map(l => (

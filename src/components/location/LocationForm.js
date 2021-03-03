@@ -68,7 +68,7 @@ export const LocationForm = () => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="address">Location address:</label>
-                    <input type="text" id="address" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Location address" value={location.address} />
+                    <input type="text" id="address" onChange={handleControlledInputChange} required className="form-control" placeholder="Location address" value={location.address} />
                 </div>
             </fieldset>
             <button className="btn btn-primary"
