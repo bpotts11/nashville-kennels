@@ -30,6 +30,7 @@ export const LocationDetail = () => {
             <ul>
                 {location.animals?.map(animal => <li key={animal.id}>{animal.name}</li>)}
             </ul>
+            <button onClick={() => { history.push(`/locations/edit/${location.id}`) }}>Edit</button>
         </section>
     )
 }

@@ -29,6 +29,17 @@ export const LocationProvider = (props) => {
             .then(getLocations)
     }
 
+    const updateLocation = location => {
+        return fetch(`http://localhost:8088/locations/${location.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(location)
+        })
+            .then(getLocations)
+    }
+
     /*
         You return a context provider which has the
         `locations` state, `getLocations` function,
@@ -37,7 +48,7 @@ export const LocationProvider = (props) => {
     */
     return (
         <LocationContext.Provider value={{
-            locations, getLocations, addLocation, getLocationById
+            locations, getLocations, getLocationById, addLocation, updateLocation
         }}>
             {props.children}
         </LocationContext.Provider>

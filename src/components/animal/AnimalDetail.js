@@ -17,10 +17,8 @@ export const AnimalDetail = () => {
         history.push("/animals")
       })
   }
-
   // debugger
   useEffect(() => {
-    console.log("useEffect", animalId)
     getAnimalById(animalId)
       .then((response) => {
         setAnimal(response)

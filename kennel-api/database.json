@@ -153,9 +153,9 @@
   ],
   "locations": [
     {
+      "id": 1,
       "name": "Nashville North",
-      "address": "100 Puppy Way",
-      "id": 1
+      "address": "100 Puppy Way"
     },
     {
       "name": "Nashville South",
