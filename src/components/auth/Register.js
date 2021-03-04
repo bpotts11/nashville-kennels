@@ -5,6 +5,7 @@ import "./Login.css"
 export const Register = (props) => {
     const firstName = useRef()
     const lastName = useRef()
+    const address = useRef()
     const email = useRef()
     const verifyPassword = useRef()
     const conflictDialog = useRef()
@@ -30,6 +31,7 @@ export const Register = (props) => {
                         },
                         body: JSON.stringify({
                             email: email.current.value,
+                            address: address.current.value,
                             name: `${firstName.current.value} ${lastName.current.value}`
                         })
                     })
@@ -45,7 +47,7 @@ export const Register = (props) => {
                     conflictDialog.current.showModal()
                 }
             })
-        
+
     }
 
     return (
@@ -65,6 +67,10 @@ export const Register = (props) => {
                 <fieldset>
                     <label htmlFor="lastName"> Last Name </label>
                     <input ref={lastName} type="text" name="lastName" className="form-control" placeholder="Last name" required />
+                </fieldset>
+                <fieldset>
+                    <label htmlFor="address"> Address </label>
+                    <input ref={address} type="text" name="address" className="form-control" placeholder="Address" required />
                 </fieldset>
                 <fieldset>
                     <label htmlFor="inputEmail"> Email address </label>

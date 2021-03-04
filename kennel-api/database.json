@@ -38,61 +38,96 @@
   ],
   "customers": [
     {
-      "id": 1,
       "name": "Hannah Hall",
-      "email": "hh@email.com"
+      "address": "100 Puppy Way",
+      "email": "hh@email.com",
+      "id": 1
     },
     {
-      "id": 2,
       "name": "Irene Iris",
-      "email": "ii@email.com"
+      "address": "200 Puppy Way",
+      "email": "ii@email.com",
+      "id": 2
     },
     {
-      "id": 3,
       "name": "Jacob Jarnkrok",
-      "email": "jj@email.com"
+      "address": "300 Puppy Way",
+      "email": "jj@email.com",
+      "id": 3
     },
     {
-      "id": 4,
       "name": "Kelly Kapowski",
-      "email": "kk@email.com"
+      "address": "400 Puppy Way",
+      "email": "kk@email.com",
+      "id": 4
     },
     {
       "email": "ll@email.com",
+      "address": "500 Puppy Way",
       "name": "Linda Long",
       "id": 5
+    },
+    {
+      "email": "mm@email.com",
+      "address": "600 Puppy Way",
+      "name": "Marty McFly",
+      "id": 6
+    },
+    {
+      "email": "nn@email.com",
+      "address": "700 Puppy Way",
+      "name": "Nora Newsom",
+      "id": 7
     }
   ],
   "employees": [
     {
       "name": "Anna Anderson",
       "locationId": 1,
+      "job": "Groomer",
       "id": 1
     },
     {
       "name": "Brittney Botts",
       "locationId": 2,
+      "job": "Groomer",
       "id": 2
     },
     {
       "name": "Charles Curtis",
       "locationId": 3,
+      "job": "Groomer",
       "id": 3
     },
     {
       "name": "Dale Dennings",
       "locationId": 4,
+      "job": "Groomer",
       "id": 4
     },
     {
       "name": "Emma Eaton",
       "locationId": 1,
+      "job": "Veterinarian",
       "id": 5
     },
     {
       "name": "Frank Ferguson",
       "locationId": 4,
+      "job": "Veterinarian",
       "id": 6
+    },
+    {
+      "name": "Gus Guthrie",
+      "locationId": 3,
+      "job": "Veterinarian",
+      "id": 7
+    },
+    {
+      "name": "Hank Hutchens",
+      "locationId": 2,
+      "job": "Veterinarian",
+      "id": 8
     }
   ],
   "locations": [

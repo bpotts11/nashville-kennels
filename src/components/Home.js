@@ -7,8 +7,7 @@ export const Home = () => (
         <small>Loving care when you're not there.</small>
 
         <address>
-            <div>Visit Us at the Nashville North Location</div>
-            <div>500 Puppy Way</div>
+            <div>Visit Us at One of Our Locations</div>
         </address>
         <PropsAndState yourName={"Brittney"} />
     </>
