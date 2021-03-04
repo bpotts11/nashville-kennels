@@ -67,32 +67,50 @@
     {
       "name": "Anna Anderson",
       "locationId": 1,
+      "job": "Groomer",
       "id": 1
     },
     {
       "name": "Brittney Botts",
       "locationId": 2,
+      "job": "Groomer",
       "id": 2
     },
     {
       "name": "Charles Curtis",
       "locationId": 3,
+      "job": "Groomer",
       "id": 3
     },
     {
       "name": "Dale Dennings",
       "locationId": 4,
+      "job": "Groomer",
       "id": 4
     },
     {
       "name": "Emma Eaton",
       "locationId": 1,
+      "job": "Veterinarian",
       "id": 5
     },
     {
       "name": "Frank Ferguson",
       "locationId": 4,
+      "job": "Veterinarian",
       "id": 6
+    },
+    {
+      "name": "Gus Guthrie",
+      "locationId": 3,
+      "job": "Veterinarian",
+      "id": 7
+    },
+    {
+      "name": "Hank Hutchens",
+      "locationId": 2,
+      "job": "Veterinarian",
+      "id": 8
     }
   ],
   "locations": [

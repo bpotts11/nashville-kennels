@@ -86,6 +86,12 @@ export const EmployeeForm = () => {
                     </select>
                 </div>
             </fieldset>
+            <fieldset>
+                <div className="form-group">
+                    <label htmlFor="job">Job:</label>
+                    <input type="text" id="job" onChange={handleControlledInputChange} required className="form-control" placeholder="Employee job" value={employee.job} />
+                </div>
+            </fieldset>
 
             <button className="btn btn-primary"
                 onClick={handleClickSaveEmployee}>
