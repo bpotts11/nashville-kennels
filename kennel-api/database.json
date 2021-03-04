@@ -29,11 +29,32 @@
       "id": 4
     },
     {
+      "id": 5,
       "name": "Cain",
       "breed": "Great Dane",
       "locationId": 3,
-      "customerId": 4,
-      "id": 5
+      "customerId": 4
+    },
+    {
+      "name": "Frog",
+      "breed": "Bulldog",
+      "locationId": 2,
+      "customerId": 6,
+      "id": 6
+    },
+    {
+      "name": "Corky",
+      "breed": "Corgi",
+      "locationId": 4,
+      "customerId": 7,
+      "id": 7
+    },
+    {
+      "name": "Daniel",
+      "breed": "Cocker Spaniel",
+      "locationId": 3,
+      "customerId": 5,
+      "id": 8
     }
   ],
   "customers": [
