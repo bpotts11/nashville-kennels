@@ -1,11 +1,11 @@
 {
   "animals": [
     {
+      "id": 1,
       "name": "Doodles",
       "breed": "Poodle",
       "locationId": 2,
-      "customerId": 1,
-      "id": 1
+      "customerId": 1
     },
     {
       "name": "Scab",
@@ -103,10 +103,10 @@
   ],
   "employees": [
     {
+      "id": 1,
       "name": "Anna Anderson",
       "locationId": 1,
-      "job": "Groomer",
-      "id": 1
+      "job": "Groomer"
     },
     {
       "name": "Brittney Botts",

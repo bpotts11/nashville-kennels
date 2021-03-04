@@ -24,7 +24,9 @@ export const LocationForm = () => {
 
     const handleSaveLocation = () => {
         if (location.name === "") {
-            window.alert("Please select a location")
+            window.alert("Please enter a location")
+        } else if (location.address === "") {
+            window.alert("Please enter an address")
         } else {
             //disable the button - no extra clicks
             setIsLoading(true);
@@ -33,7 +35,7 @@ export const LocationForm = () => {
                 updateLocation({
                     id: location.id,
                     name: location.name,
-                    address: location.address,
+                    address: location.address
                 })
                     .then(() => history.push(`/locations/detail/${location.id}`))
             } else {

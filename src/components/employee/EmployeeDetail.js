@@ -11,7 +11,6 @@ export const EmployeeDetail = () => {
     const { employeeId } = useParams();
     const history = useHistory();
     useEffect(() => {
-        console.log("useEffect", employeeId)
         getEmployeeById(employeeId)
             .then((response) => {
                 setEmployee(response)
@@ -23,6 +22,7 @@ export const EmployeeDetail = () => {
             <h3 className="employee__name">{employee.name}</h3>
             <div className="employee__location">Location: {employee.location?.name}</div>
             <div className="employee__job">Job: {employee.job}</div>
+            <button onClick={() => { history.push(`/employees/edit/${employee.id}`) }}>Edit</button>
         </section>
     )
 }

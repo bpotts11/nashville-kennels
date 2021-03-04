@@ -39,8 +39,14 @@ export const AnimalForm = () => {
     }
 
     const handleSaveAnimal = () => {
-        if (parseInt(animal.locationId) === 0) {
+        if (animal.name === "") {
+            window.alert("Please enter an animal name")
+        } else if (animal.breed === "") {
+            window.alert("Please enter an animal breed")
+        } else if (parseInt(animal.locationId) === 0) {
             window.alert("Please select a location")
+        } else if (parseInt(animal.customerId) === 0) {
+            window.alert("Please select an owner")
         } else {
             //disable the button - no extra clicks
             setIsLoading(true);
@@ -116,9 +122,9 @@ export const AnimalForm = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="customer">Customer: </label>
+                    <label htmlFor="customer">Owner: </label>
                     <select value={animal.customerId} id="customerId" className="form-control" onChange={handleControlledInputChange}>
-                        <option value="0">Select a customer</option>
+                        <option value="0">Select an owner</option>
                         {customers.map(c => (
                             <option key={c.id} value={c.id}>
                                 {c.name}
