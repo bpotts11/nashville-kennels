@@ -13,6 +13,11 @@ export const CustomerProvider = (props) => {
             .then(setCustomers)
     }
 
+    const getCustomerById = (id) => {
+        return fetch(`http://localhost:8088/customers/${id}?_embed=animals`)
+            .then(res => res.json())
+    }
+
     const addCustomer = customerObj => {
         return fetch("http://localhost:8088/customers", {
             method: "POST",
@@ -32,7 +37,7 @@ export const CustomerProvider = (props) => {
     */
     return (
         <CustomerContext.Provider value={{
-            customers, getCustomers, addCustomer
+            customers, getCustomers, getCustomerById, addCustomer
         }}>
             {props.children}
         </CustomerContext.Provider>
