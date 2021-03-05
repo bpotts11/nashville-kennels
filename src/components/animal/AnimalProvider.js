@@ -7,6 +7,8 @@ export const AnimalContext = createContext()
 export const AnimalProvider = (props) => {
     const [animals, setAnimals] = useState([])
 
+    const [searchTerms, setSearchTerms] = useState("")
+
     const getAnimals = () => {
         return fetch("http://localhost:8088/animals")
             .then(res => res.json())
@@ -55,7 +57,7 @@ export const AnimalProvider = (props) => {
     */
     return (
         <AnimalContext.Provider value={{
-            animals, getAnimals, getAnimalById, addAnimal, releaseAnimal, updateAnimal
+            animals, getAnimals, getAnimalById, addAnimal, releaseAnimal, updateAnimal, searchTerms, setSearchTerms
         }}>
             {props.children}
         </AnimalContext.Provider>

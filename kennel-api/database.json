@@ -2,7 +2,7 @@
   "animals": [
     {
       "id": 1,
-      "name": "Doodles",
+      "name": "Doodle",
       "breed": "Poodle",
       "locationId": 2,
       "customerId": 1
@@ -55,6 +55,34 @@
       "locationId": 3,
       "customerId": 5,
       "id": 8
+    },
+    {
+      "name": "Bowzer",
+      "breed": "Miniature Schnauzer",
+      "locationId": 4,
+      "customerId": 8,
+      "id": 9
+    },
+    {
+      "name": "Sméagol ",
+      "breed": "Beagle",
+      "locationId": 1,
+      "customerId": 6,
+      "id": 10
+    },
+    {
+      "name": "Beaver",
+      "breed": "Golden Retriever",
+      "locationId": 3,
+      "customerId": 3,
+      "id": 11
+    },
+    {
+      "name": "Doug",
+      "breed": "Pug",
+      "locationId": 2,
+      "customerId": 7,
+      "id": 12
     }
   ],
   "customers": [
@@ -155,14 +183,19 @@
       "locationId": 2,
       "job": "Veterinarian",
       "id": 8
+    },
+    {
+      "name": "Issac Ivie",
+      "locationId": 3,
+      "job": "Assistant",
+      "id": 9
     }
   ],
   "locations": [
     {
       "id": 1,
-      "name": "Hannah Hal",
-      "address": "100 Puppy Way",
-      "email": "hh@email.com"
+      "name": "Nashville North",
+      "address": "100 Puppy Way"
     },
     {
       "name": "Nashville South",

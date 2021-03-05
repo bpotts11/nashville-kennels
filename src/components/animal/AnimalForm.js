@@ -104,7 +104,7 @@ export const AnimalForm = () => {
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="breed">Animal breed:</label>
-                    <input type="text" id="breed" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Animal breed" value={animal.breed} />
+                    <input type="text" id="breed" onChange={handleControlledInputChange} required className="form-control" placeholder="Animal breed" value={animal.breed} />
                 </div>
             </fieldset>
             <fieldset>

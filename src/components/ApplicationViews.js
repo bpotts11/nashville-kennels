@@ -17,14 +17,17 @@ import { AnimalDetail } from "./animal/AnimalDetail"
 import { EmployeeDetail } from "./employee/EmployeeDetail"
 import { LocationDetail } from "./location/LocationDetail"
 import { CustomerDetail } from "./customer/CustomerDetail"
+import { AnimalSearch } from "./animal/AnimalSearch"
 
 export const ApplicationViews = () => {
     return (
         <>
             {/* Render the location list when http://localhost:3000/ */}
-            <Route exact path="/">
-                <Home />
-            </Route>
+            <CustomerProvider>
+                <Route exact path="/">
+                    <Home />
+                </Route>
+            </CustomerProvider>
 
             {/* Render the animal list when http://localhost:3000/animals */}
             <AnimalProvider>
@@ -32,6 +35,7 @@ export const ApplicationViews = () => {
                     <CustomerProvider>
                         {/* Note the addition of "exact" now that we have an additional route with "/animals" in it below this Route: "/animals/create" */}
                         <Route exact path="/animals">
+                            <AnimalSearch />
                             <AnimalList />
                         </Route>
                         <Route path="/animals/create">
