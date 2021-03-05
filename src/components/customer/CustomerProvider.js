@@ -29,6 +29,17 @@ export const CustomerProvider = (props) => {
             .then(getCustomers)
     }
 
+    const updateCustomer = customer => {
+        return fetch(`http://localhost:8088/customers/${customer.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(customer)
+        })
+            .then(getCustomers)
+    }
+
     /*
         You return a context provider which has the
         `customers` state, `getCustomers` function,
@@ -37,7 +48,7 @@ export const CustomerProvider = (props) => {
     */
     return (
         <CustomerContext.Provider value={{
-            customers, getCustomers, getCustomerById, addCustomer
+            customers, getCustomers, getCustomerById, addCustomer, updateCustomer
         }}>
             {props.children}
         </CustomerContext.Provider>

@@ -27,6 +27,7 @@ export const CustomerDetail = () => {
             <ul>
                 {customer.animals?.map(animal => <li key={animal.id}>{animal.name}</li>)}
             </ul>
+            <button onClick={() => { history.push(`/customers/edit/${customer.id}`) }}>Edit</button>
         </section>
     )
 }
