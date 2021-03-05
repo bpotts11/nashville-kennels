@@ -12,9 +12,11 @@ import { LocationProvider } from "./location/LocationProvider";
 import { AnimalForm } from "./animal/AnimalForm"
 import { EmployeeForm } from "./employee/EmployeeForm"
 import { LocationForm } from "./location/LocationForm";
+import { CustomerForm } from "./customer/CustomerForm";
 import { AnimalDetail } from "./animal/AnimalDetail"
 import { EmployeeDetail } from "./employee/EmployeeDetail"
 import { LocationDetail } from "./location/LocationDetail"
+import { CustomerDetail } from "./customer/CustomerDetail"
 
 export const ApplicationViews = () => {
     return (
@@ -35,6 +37,9 @@ export const ApplicationViews = () => {
                         <Route path="/animals/create">
                             <AnimalForm />
                         </Route>
+                        <Route path="/animals/edit/:animalId(\d+)">
+                            <AnimalForm />
+                        </Route>
                         <Route exact path="/animals/detail/:animalId(\d+)">
                             <AnimalDetail />
                         </Route>
@@ -46,6 +51,12 @@ export const ApplicationViews = () => {
                 <Route exact path="/customers">
                     <CustomerList />
                 </Route>
+                <Route path="/customers/edit/:customerId(\d+)">
+                    <CustomerForm />
+                </Route>
+                <Route exact path="/customers/detail/:customerId(\d+)">
+                    <CustomerDetail />
+                </Route>
             </CustomerProvider>
             {/* Render the animal list when http://localhost:3000/employees */}
             <EmployeeProvider>
@@ -54,6 +65,9 @@ export const ApplicationViews = () => {
                         <EmployeeList />
                     </Route>
                     <Route path="/employees/create">
+                        <EmployeeForm />
+                    </Route>
+                    <Route path="/employees/edit/:employeeId(\d+)">
                         <EmployeeForm />
                     </Route>
                     <Route exact path="/employees/detail/:employeeId(\d+)">
@@ -67,6 +81,9 @@ export const ApplicationViews = () => {
                     <LocationList />
                 </Route>
                 <Route path="/locations/create">
+                    <LocationForm />
+                </Route>
+                <Route path="/locations/edit/:locationId(\d+)">
                     <LocationForm />
                 </Route>
                 <Route exact path="/locations/detail/:locationId(\d+)">

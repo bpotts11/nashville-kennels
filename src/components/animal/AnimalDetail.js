@@ -17,10 +17,8 @@ export const AnimalDetail = () => {
         history.push("/animals")
       })
   }
-
   // debugger
   useEffect(() => {
-    console.log("useEffect", animalId)
     getAnimalById(animalId)
       .then((response) => {
         setAnimal(response)
@@ -34,6 +32,7 @@ export const AnimalDetail = () => {
       {/* What's up with the question mark???? See below.*/}
       <div className="animal__location">Location: {animal.location?.name}</div>
       <div className="animal__owner">Customer: {animal.customer?.name}</div>
+      <button onClick={() => { history.push(`/animals/edit/${animal.id}`) }}>Edit</button>
       <button onClick={handleRelease}>Release Animal</button>
     </section>
   )

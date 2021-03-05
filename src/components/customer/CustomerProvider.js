@@ -13,6 +13,11 @@ export const CustomerProvider = (props) => {
             .then(setCustomers)
     }
 
+    const getCustomerById = (id) => {
+        return fetch(`http://localhost:8088/customers/${id}?_embed=animals`)
+            .then(res => res.json())
+    }
+
     const addCustomer = customerObj => {
         return fetch("http://localhost:8088/customers", {
             method: "POST",
@@ -20,6 +25,17 @@ export const CustomerProvider = (props) => {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(customerObj)
+        })
+            .then(getCustomers)
+    }
+
+    const updateCustomer = customer => {
+        return fetch(`http://localhost:8088/customers/${customer.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(customer)
         })
             .then(getCustomers)
     }
@@ -32,7 +48,7 @@ export const CustomerProvider = (props) => {
     */
     return (
         <CustomerContext.Provider value={{
-            customers, getCustomers, addCustomer
+            customers, getCustomers, getCustomerById, addCustomer, updateCustomer
         }}>
             {props.children}
         </CustomerContext.Provider>
